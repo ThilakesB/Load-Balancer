@@ -1,77 +1,173 @@
-<div align="center">
-  <img alt="Python Load Balancer Logo" src="logo.png" width="200">
-  <h1>Python Load Balancer</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Python Load Balancer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #0f172a;
+      color: #e2e8f0;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+    }
+    .center {
+      text-align: center;
+    }
+    img {
+      width: 150px;
+    }
+    h1, h2, h3 {
+      color: #38bdf8;
+    }
+    .badge img {
+      margin: 5px;
+    }
+    .box {
+      background: #1e293b;
+      padding: 15px;
+      border-radius: 10px;
+      margin: 10px 0;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    code {
+      background: #020617;
+      padding: 5px 10px;
+      border-radius: 5px;
+      display: inline-block;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <!-- Header -->
+  <div class="center">
+    <img src="logo.png" alt="Load Balancer Logo">
+    <h1>Python Load Balancer</h1>
+    <h3>High-performance load balancer built using Python</h3>
+
+    <div class="badge">
+      <img src="https://img.shields.io/badge/license-MIT-blue">
+      <img src="https://img.shields.io/badge/status-active-success">
+      <img src="https://img.shields.io/badge/python-3.x-blue">
+    </div>
+  </div>
+
+  <!-- Intro -->
+  <div class="box">
+    <p>
+      This project is a custom-built Load Balancer that distributes incoming requests
+      across multiple servers to improve performance and reliability.
+    </p>
+  </div>
+
+  <!-- Install -->
+  <h2>🚀 Installation</h2>
+  <div class="box">
+    <code>pip install -r requirements.txt</code>
+  </div>
+
+  <!-- Features -->
+  <h2>🚀 Features</h2>
+  <div class="box">
+    <ul>
+      <li>Load Distribution</li>
+      <li>Round Robin Algorithm</li>
+      <li>High Availability</li>
+      <li>Scalability</li>
+      <li>Fault Tolerance</li>
+    </ul>
+  </div>
+
+  <!-- Working -->
+  <h2>⚙️ How It Works</h2>
+  <div class="box">
+    <ul>
+      <li>Client sends request</li>
+      <li>Load balancer receives request</li>
+      <li>Selects server using Round Robin</li>
+      <li>Forwards request</li>
+      <li>Returns response</li>
+    </ul>
+  </div>
+
+  <!-- Algorithm -->
+  <h2>🧠 Algorithm</h2>
+  <div class="box">
+    <p><b>Round Robin:</b></p>
+    <ul>
+      <li>Request 1 → Server A</li>
+      <li>Request 2 → Server B</li>
+      <li>Request 3 → Server C</li>
+      <li>Request 4 → Server A</li>
+    </ul>
+  </div>
+
+  <!-- Structure -->
+  <h2>📁 Project Structure</h2>
+  <div class="box">
+    <ul>
+      <li>load_balancer.py</li>
+      <li>server.py</li>
+      <li>client.py</li>
+      <li>config.json</li>
+    </ul>
+  </div>
+
+  <!-- Setup -->
+  <h2>🛠️ Setup</h2>
+  <div class="box">
+    <ul>
+      <li>Clone repository</li>
+      <li>Install dependencies</li>
+      <li>Run backend servers</li>
+      <li>Start load balancer</li>
+      <li>Send requests</li>
+    </ul>
+  </div>
+
+  <!-- Use Cases -->
+  <h2>📊 Use Cases</h2>
+  <div class="box">
+    <ul>
+      <li>Web apps</li>
+      <li>API distribution</li>
+      <li>Microservices</li>
+      <li>Traffic management</li>
+    </ul>
+  </div>
+
+  <!-- Future -->
+  <h2>🔮 Future Improvements</h2>
+  <div class="box">
+    <ul>
+      <li>Least Connections Algorithm</li>
+      <li>Health Checks</li>
+      <li>HTTPS Support</li>
+      <li>Dashboard UI</li>
+    </ul>
+  </div>
+
+  <!-- Footer -->
+  <h2>📜 License</h2>
+  <div class="box">
+    <p>MIT License</p>
+  </div>
+
 </div>
 
-<div align="center">
-  <h3>Low-level orchestration framework for building stateful agents.</h3>
-</div>
-
-<div align="center">
-  <a href="https://opensource.org/licenses/MIT" target="_blank"><img src="https://img.shields.io/pypi/l/langgraph" alt="PyPI - License"></a>
-  <a href="https://pypistats.org/packages/langgraph" target="_blank"><img src="https://img.shields.io/pepy/dt/langgraph" alt="PyPI - Downloads"></a>
-  <a href="https://pypi.org/project/langgraph/" target="_blank"><img src="https://img.shields.io/pypi/v/langgraph.svg?label=%20" alt="Version"></a>
-  <a href="https://x.com/langchain" target="_blank"><img src="https://img.shields.io/twitter/url/https/twitter.com/langchain.svg?style=social&label=Follow%20%40LangChain" alt="Twitter / X"></a>
-</div>
-
-<br>
-
-Trusted by companies shaping the future of agents – including Klarna, Replit, Elastic, and more – LangGraph is a low-level orchestration framework for building, managing, and deploying long-running, stateful agents.
-
-```bash
-pip install -U langgraph
-```
-
-If you're looking to quickly build agents with LangChain's `create_agent` (built on LangGraph), check out the [LangChain Agents documentation](https://docs.langchain.com/oss/python/langchain/agents).
-
-> [!NOTE]
-> Looking for the JS/TS library? Check out [LangGraph.js](https://github.com/langchain-ai/langgraphjs) and the [JS docs](https://docs.langchain.com/oss/javascript/langgraph/overview).
-
-## Why use LangGraph?
-
-LangGraph provides low-level supporting infrastructure for *any* long-running, stateful workflow or agent:
-
-- **[Durable execution](https://docs.langchain.com/oss/python/langgraph/durable-execution)** — Build agents that persist through failures and can run for extended periods, automatically resuming from exactly where they left off.
-- **[Human-in-the-loop](https://docs.langchain.com/oss/python/langgraph/interrupts)** — Seamlessly incorporate human oversight by inspecting and modifying agent state at any point during execution.
-- **[Comprehensive memory](https://docs.langchain.com/oss/python/langgraph/memory)** — Create truly stateful agents with both short-term working memory for ongoing reasoning and long-term persistent memory across sessions.
-- **[Debugging with LangSmith](https://www.langchain.com/langsmith)** — Gain deep visibility into complex agent behavior with visualization tools that trace execution paths, capture state transitions, and provide detailed runtime metrics.
-- **[Production-ready deployment](https://docs.langchain.com/langsmith/deployments)** — Deploy sophisticated agent systems confidently with scalable infrastructure designed to handle the unique challenges of stateful, long-running workflows.
-
-> [!TIP]
-> For developing, debugging, and deploying AI agents and LLM applications, see [LangSmith](https://docs.langchain.com/langsmith/home).
-
-## LangGraph ecosystem
-
-While LangGraph can be used standalone, it also integrates seamlessly with any LangChain product, giving developers a full suite of tools for building agents.
-
-To improve your LLM application development, pair LangGraph with:
-
-- [Deep Agents](https://github.com/langchain-ai/deepagents) *(new!)* – Build agents that can plan, use subagents, and leverage file systems for complex tasks.
-- [LangChain](https://docs.langchain.com/oss/python/langchain/overview) – Provides integrations and composable components to streamline LLM application development.
-- [LangSmith](https://www.langchain.com/langsmith) – Helpful for agent evals and observability. Debug poor-performing LLM app runs, evaluate agent trajectories, gain visibility in production, and improve performance over time.
-- [LangSmith Deployment](https://docs.langchain.com/langsmith/deployments) – Deploy and scale agents effortlessly with a purpose-built deployment platform for long-running, stateful workflows. Discover, reuse, configure, and share agents across teams – and iterate quickly with visual prototyping in [LangSmith Studio](https://docs.langchain.com/langsmith/studio).
-
----
-
-## Documentation
-
-- [docs.langchain.com](https://docs.langchain.com/oss/python/langgraph/overview) – Comprehensive documentation, including conceptual overviews and guides
-- [reference.langchain.com/python/langgraph](https://reference.langchain.com/python/langgraph) – API reference docs for LangGraph packages
-- [LangGraph Quickstart](https://docs.langchain.com/oss/python/langgraph/quickstart) – Get started building with LangGraph
-- [Chat LangChain](https://chat.langchain.com/) – Chat with the LangChain documentation and get answers to your questions
-
-**Discussions**: Visit the [LangChain Forum](https://forum.langchain.com) to connect with the community and share all of your technical questions, ideas, and feedback.
-
-## Additional resources
-
-- **[Guides](https://docs.langchain.com/oss/python/learn)** – Quick, actionable code snippets for topics such as streaming, adding memory & persistence, and design patterns (e.g. branching, subgraphs, etc.).
-- **[LangChain Academy](https://academy.langchain.com/courses/intro-to-langgraph)** – Learn the basics of LangGraph in our free, structured course.
-- **[Case studies](https://www.langchain.com/built-with-langgraph)** – Hear how industry leaders use LangGraph to ship AI applications at scale.
-- [Contributing Guide](https://docs.langchain.com/oss/python/contributing/overview) – Learn how to contribute to LangChain projects and find good first issues.
-- [Code of Conduct](https://github.com/langchain-ai/langchain/?tab=coc-ov-file) – Our community guidelines and standards for participation.
-
----
-
-## Acknowledgements
-
-LangGraph is inspired by [Pregel](https://research.google/pubs/pub37252/) and [Apache Beam](https://beam.apache.org/). The public interface draws inspiration from [NetworkX](https://networkx.org/documentation/latest/). LangGraph is built by LangChain Inc, the creators of LangChain, but can be used without LangChain.
+</body>
+</html>
