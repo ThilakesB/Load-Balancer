@@ -1,83 +1,77 @@
 <div align="center">
-  <a href="#">
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://via.placeholder.com/600x150/000000/FFFFFF?text=Python+Load+Balancer">
-      <source media="(prefers-color-scheme: light)" srcset="https://via.placeholder.com/600x150/FFFFFF/000000?text=Python+Load+Balancer">
-      <img alt="Python Load Balancer Logo" src="https://via.placeholder.com/600x150/FFFFFF/000000?text=Python+Load+Balancer" width="50%">
-    </picture>
-  </a>
+  <img alt="Python Load Balancer Logo" src="logo.png" width="200">
+  <h1>Python Load Balancer</h1>
 </div>
 
 <div align="center">
-  <h3>High-performance, asynchronous HTTP orchestration framework for routing web traffic.</h3>
+  <h3>Low-level orchestration framework for building stateful agents.</h3>
 </div>
 
 <div align="center">
-  <a href="https://opensource.org/licenses/MIT" target="_blank"><img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License"></a>
-  <a href="#" target="_blank"><img src="https://img.shields.io/badge/Python-3.8%2B-blue.svg" alt="Python Version"></a>
-  <a href="#" target="_blank"><img src="https://img.shields.io/badge/aiohttp-supported-brightgreen.svg" alt="aiohttp Framework"></a>
-  <a href="#" target="_blank"><img src="https://img.shields.io/badge/Status-Active-success.svg" alt="Status"></a>
+  <a href="https://opensource.org/licenses/MIT" target="_blank"><img src="https://img.shields.io/pypi/l/langgraph" alt="PyPI - License"></a>
+  <a href="https://pypistats.org/packages/langgraph" target="_blank"><img src="https://img.shields.io/pepy/dt/langgraph" alt="PyPI - Downloads"></a>
+  <a href="https://pypi.org/project/langgraph/" target="_blank"><img src="https://img.shields.io/pypi/v/langgraph.svg?label=%20" alt="Version"></a>
+  <a href="https://x.com/langchain" target="_blank"><img src="https://img.shields.io/twitter/url/https/twitter.com/langchain.svg?style=social&label=Follow%20%40LangChain" alt="Twitter / X"></a>
 </div>
 
 <br>
 
-Designed for robust web applications – the Python Load Balancer is a high-performance orchestration framework for distributing, managing, and health-checking incoming HTTP traffic asynchronously.
+Trusted by companies shaping the future of agents – including Klarna, Replit, Elastic, and more – LangGraph is a low-level orchestration framework for building, managing, and deploying long-running, stateful agents.
 
 ```bash
-pip install -r requirements.txt
+pip install -U langgraph
 ```
 
-If you're looking to quickly test out the load balancer, check out the provided `test_backends.py` to easily spin up mock servers.
+If you're looking to quickly build agents with LangChain's `create_agent` (built on LangGraph), check out the [LangChain Agents documentation](https://docs.langchain.com/oss/python/langchain/agents).
 
 > [!NOTE]
-> Ensure you have activated your virtual environment before running the load balancer.
+> Looking for the JS/TS library? Check out [LangGraph.js](https://github.com/langchain-ai/langgraphjs) and the [JS docs](https://docs.langchain.com/oss/javascript/langgraph/overview).
 
-## Why use Python Load Balancer?
+## Why use LangGraph?
 
-This Load Balancer provides low-level supporting infrastructure for *any* high-volume, scalable web application:
+LangGraph provides low-level supporting infrastructure for *any* long-running, stateful workflow or agent:
 
-- **Durable routing** — Distributes incoming HTTP requests sequentially (Round-Robin) across all active backends to ensure even load distribution.
-- **Active health-checks** — Actively monitors the health of backend servers and automatically marks them as inactive if they fail to respond, seamlessly pulling them out of the rotation.
-- **Resilient retries** — Automatically retries failed requests on the next available backend server to ensure high availability and prevent dropped connections.
-- **High concurrency** — Handles a massive volume of concurrent requests efficiently without blocking, using Python's native asynchronous I/O (`aiohttp`).
-- **Production-ready configuration** — Easily adjust settings like upstream timeouts, retry limits, and concurrent caps via a lightweight `config.json` file.
+- **[Durable execution](https://docs.langchain.com/oss/python/langgraph/durable-execution)** — Build agents that persist through failures and can run for extended periods, automatically resuming from exactly where they left off.
+- **[Human-in-the-loop](https://docs.langchain.com/oss/python/langgraph/interrupts)** — Seamlessly incorporate human oversight by inspecting and modifying agent state at any point during execution.
+- **[Comprehensive memory](https://docs.langchain.com/oss/python/langgraph/memory)** — Create truly stateful agents with both short-term working memory for ongoing reasoning and long-term persistent memory across sessions.
+- **[Debugging with LangSmith](https://www.langchain.com/langsmith)** — Gain deep visibility into complex agent behavior with visualization tools that trace execution paths, capture state transitions, and provide detailed runtime metrics.
+- **[Production-ready deployment](https://docs.langchain.com/langsmith/deployments)** — Deploy sophisticated agent systems confidently with scalable infrastructure designed to handle the unique challenges of stateful, long-running workflows.
 
-## Usage Guide
+> [!TIP]
+> For developing, debugging, and deploying AI agents and LLM applications, see [LangSmith](https://docs.langchain.com/langsmith/home).
 
-While this Load Balancer can be used standalone, it is designed to integrate seamlessly with your existing backend architectures.
+## LangGraph ecosystem
 
-### 1. Configure the Load Balancer
+While LangGraph can be used standalone, it also integrates seamlessly with any LangChain product, giving developers a full suite of tools for building agents.
 
-Edit the `config.json` file to customize the load balancer settings:
-- `backends`: List of backend server URLs.
-- `max_concurrent_requests`: Maximum number of concurrent requests the load balancer will handle.
-- `health_check`: Settings for active health checking (`interval_seconds`, `timeout_seconds`, `path`).
-- `proxy`: Settings for the proxy logic (`max_retries`, `upstream_timeout_seconds`, `port`, `host`).
+To improve your LLM application development, pair LangGraph with:
 
-### 2. Start the Backend Servers (Testing)
+- [Deep Agents](https://github.com/langchain-ai/deepagents) *(new!)* – Build agents that can plan, use subagents, and leverage file systems for complex tasks.
+- [LangChain](https://docs.langchain.com/oss/python/langchain/overview) – Provides integrations and composable components to streamline LLM application development.
+- [LangSmith](https://www.langchain.com/langsmith) – Helpful for agent evals and observability. Debug poor-performing LLM app runs, evaluate agent trajectories, gain visibility in production, and improve performance over time.
+- [LangSmith Deployment](https://docs.langchain.com/langsmith/deployments) – Deploy and scale agents effortlessly with a purpose-built deployment platform for long-running, stateful workflows. Discover, reuse, configure, and share agents across teams – and iterate quickly with visual prototyping in [LangSmith Studio](https://docs.langchain.com/langsmith/studio).
 
-You can run the provided `test_backends.py` script to simulate multiple backend servers running on ports `6001`, `6002`, and `6003`:
+---
 
-```bash
-python test_backends.py
-```
-*Leave this running in one terminal window.*
+## Documentation
 
-### 3. Start the Load Balancer
+- [docs.langchain.com](https://docs.langchain.com/oss/python/langgraph/overview) – Comprehensive documentation, including conceptual overviews and guides
+- [reference.langchain.com/python/langgraph](https://reference.langchain.com/python/langgraph) – API reference docs for LangGraph packages
+- [LangGraph Quickstart](https://docs.langchain.com/oss/python/langgraph/quickstart) – Get started building with LangGraph
+- [Chat LangChain](https://chat.langchain.com/) – Chat with the LangChain documentation and get answers to your questions
 
-Open a **new terminal window**, activate the virtual environment, and run the load balancer:
+**Discussions**: Visit the [LangChain Forum](https://forum.langchain.com) to connect with the community and share all of your technical questions, ideas, and feedback.
 
-```bash
-.\venv\Scripts\Activate.ps1
-python loadbalancer.py
-```
+## Additional resources
 
-### 4. Test the Load Balancer
+- **[Guides](https://docs.langchain.com/oss/python/learn)** – Quick, actionable code snippets for topics such as streaming, adding memory & persistence, and design patterns (e.g. branching, subgraphs, etc.).
+- **[LangChain Academy](https://academy.langchain.com/courses/intro-to-langgraph)** – Learn the basics of LangGraph in our free, structured course.
+- **[Case studies](https://www.langchain.com/built-with-langgraph)** – Hear how industry leaders use LangGraph to ship AI applications at scale.
+- [Contributing Guide](https://docs.langchain.com/oss/python/contributing/overview) – Learn how to contribute to LangChain projects and find good first issues.
+- [Code of Conduct](https://github.com/langchain-ai/langchain/?tab=coc-ov-file) – Our community guidelines and standards for participation.
 
-With both the backends and the load balancer running, you can send requests to the load balancer:
+---
 
-```bash
-curl http://127.0.0.1:5000/
-```
+## Acknowledgements
 
-You will receive responses alternating between the backend servers, demonstrating the round-robin routing in action.
+LangGraph is inspired by [Pregel](https://research.google/pubs/pub37252/) and [Apache Beam](https://beam.apache.org/). The public interface draws inspiration from [NetworkX](https://networkx.org/documentation/latest/). LangGraph is built by LangChain Inc, the creators of LangChain, but can be used without LangChain.
